@@ -38,6 +38,27 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     public long deathPanelAnimationTime = 1000;
+
+    [SerializeField]
+    public int score = 0;
+
+    [SerializeField]
+    public GameObject scoreText;
+
+    [SerializeField]
+    public LayerMask enemyLayer;
+
+    [SerializeField]
+    public LayerMask personLayer;
+
+    [SerializeField]
+    public List<GameObject> punchPlanes;
+
+    [SerializeField]
+    public float lastPunchTime = 0f;
+
+    [SerializeField]
+    public float punchCooldown = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +95,80 @@ public class PlayerController : MonoBehaviour
             // get the DeathText component by name and change the alpha value of the text
             deathPanelText.GetComponent<TextMeshProUGUI>().color = new Color(1, 0, 0, Mathf.Clamp((System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond - deathTime) / (float)deathPanelAnimationTime, 0f, 1f));
         }
+
+        // light attack (left mouse button), E
+        if (Input.GetKey(KeyCode.E) || Input.GetMouseButton(0)) {
+            // set light attack plane to active
+            punchPlanes[0].SetActive(true);
+            Vector3 punchPlaneScale = new Vector3(transform.localScale.x * punchPlanes[0].transform.localScale.x*5, transform.localScale.y * punchPlanes[0].transform.localScale.y, transform.localScale.z * punchPlanes[0].transform.localScale.z * 10);
+            Collider [] enemyHits = Physics.OverlapBox(punchPlanes[0].transform.position, punchPlaneScale, punchPlanes[0].transform.rotation, enemyLayer);
+            Collider[] personHits = Physics.OverlapBox(punchPlanes[0].transform.position, punchPlaneScale, punchPlanes[0].transform.rotation, personLayer);
+
+            foreach (Collider enemyHit in enemyHits)
+            {
+                // if cooldown is over, add score
+                if (Time.time - lastPunchTime >= punchCooldown)
+                {
+                    score += 100;
+                    scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + score;
+                    lastPunchTime = Time.time;
+                }
+            }
+
+            foreach (Collider personHit in personHits)
+            {
+                // if cooldown is over, add score
+                if (Time.time - lastPunchTime >= punchCooldown)
+                {
+                    score += 200;
+                    scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + score;
+                    lastPunchTime = Time.time;
+                }
+            }
+        }
+        else
+        {
+            // set light attack plane to inactive
+            punchPlanes[0].SetActive(false);
+        }
+
+        // heavy attack (right mouse button), Q
+        if (Input.GetKey(KeyCode.Q) || Input.GetMouseButton(1))
+        {
+            
+            // set heavy attack plane to active
+            punchPlanes[1].SetActive(true);
+            Vector3 punchPlaneScale = new Vector3(transform.localScale.x * punchPlanes[1].transform.localScale.x*5, transform.localScale.y * punchPlanes[1].transform.localScale.y, transform.localScale.z * punchPlanes[1].transform.localScale.z*10);
+            Collider[] enemyHits = Physics.OverlapBox(punchPlanes[1].transform.position, punchPlaneScale/2, punchPlanes[1].transform.rotation, enemyLayer);
+            Collider[] personHits = Physics.OverlapBox(punchPlanes[1].transform.position, punchPlaneScale/2, punchPlanes[1].transform.rotation, personLayer);
+
+            foreach (Collider enemyHit in enemyHits)
+            {
+                // if cooldown is over, add score
+                if (Time.time - lastPunchTime >= punchCooldown)
+                {
+                    score += 100;
+                    scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + score;
+                    lastPunchTime = Time.time;
+                }
+            }
+
+            foreach (Collider personHit in personHits)
+            {
+                // if cooldown is over, add score
+                if (Time.time - lastPunchTime >= punchCooldown)
+                {
+                    score += 200;
+                    scoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + score;
+                    lastPunchTime = Time.time;
+                }
+            }
+        }
+        else
+        {
+            // set heavy attack plane to inactive
+            punchPlanes[1].SetActive(false);
+        }
     }
 
     // Check if the player has collided with a banana
@@ -91,4 +186,8 @@ public class PlayerController : MonoBehaviour
             monkeTimeStart = System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond;
         }
     }
+
+    //check if a PunchHit event has occured
+
+
 }
