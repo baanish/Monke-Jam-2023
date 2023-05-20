@@ -6,17 +6,6 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField]
     public LayerMask punchLayer;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnTriggerEnter(Collider other)
     {
         if (punchLayer == (punchLayer | (1 << other.gameObject.layer)))

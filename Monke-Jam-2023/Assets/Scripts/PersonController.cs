@@ -11,18 +11,6 @@ public class PersonController : MonoBehaviour
 
     [SerializeField]
     public float launchSpeed = 50f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // on entering a trigger with layer mask punchLayer (punch plane) launch them and destroy the person after aliveTime
     void OnTriggerEnter(Collider other)
     {

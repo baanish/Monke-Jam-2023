@@ -186,8 +186,4 @@ public class PlayerController : MonoBehaviour
             monkeTimeStart = System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond;
         }
     }
-
-    //check if a PunchHit event has occured
-
-
 }

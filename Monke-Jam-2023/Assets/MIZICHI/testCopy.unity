@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17425913, g: 0.21792385, b: 0.30013838, a: 1}
+  m_IndirectSpecularColor: {r: 0.17425922, g: 0.21792378, b: 0.30013847, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -672,11 +672,13 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   personLayer:
     serializedVersion: 2
-    m_Bits: 0
-  punchPlanes: []
+    m_Bits: 4096
+  punchPlanes:
+  - {fileID: 0}
+  - {fileID: 0}
   lastPunchTime: 0
   punchCooldown: 0.2
 --- !u!1 &705507993
