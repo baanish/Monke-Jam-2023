@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fb7a8a7e0a2328499b5047ed366918b
-      internalID: 55362484
+      spriteID: c0210580088b0134fa2cd62b84b2bfd2
+      internalID: 1328106543
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a61c5eb182fbf53489dca8cd36771698
-      internalID: -2108482575
+      spriteID: 2486b76bacb027d4e9972a317df94345
+      internalID: -671302751
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19e8ff53367034645b2ae217a660a61e
-      internalID: 232082461
+      spriteID: e3f9f87a200d0314799ef8f49e039909
+      internalID: 254255630
       vertices: []
       indices: 
       edges: []
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d096f0d424c86444bfaeba86ac9816f
-      internalID: 1341211579
+      spriteID: b8d5829450818e547b2b055f88a22c4e
+      internalID: 99491385
       vertices: []
       indices: 
       edges: []
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dac88fd224d733429c0d3c2c4f21dc3
-      internalID: 1088995767
+      spriteID: db8e400f00b16c4468431e12d798f631
+      internalID: -509985126
       vertices: []
       indices: 
       edges: []
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 277e3247cbc50ea4ea906e1f65d4be89
-      internalID: -1229903546
+      spriteID: e2daf7ae28d1ca647979838700167279
+      internalID: -1318596681
       vertices: []
       indices: 
       edges: []
@@ -245,7 +245,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5b752d7e7965c2548a0d92eefb644b7e
+    spriteID: c69781ac85efbe04c9b45da6096cfe25
     internalID: 0
     vertices: []
     indices: 
@@ -253,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      monkeidle_sh_0: 55362484
-      monkeidle_sh_1: -2108482575
-      monkeidle_sh_2: 232082461
-      monkeidle_sh_3: 1341211579
-      monkeidle_sh_4: 1088995767
-      monkeidle_sh_5: -1229903546
+      monkeidle_sh_0: 1328106543
+      monkeidle_sh_1: -671302751
+      monkeidle_sh_2: 254255630
+      monkeidle_sh_3: 99491385
+      monkeidle_sh_4: -509985126
+      monkeidle_sh_5: -1318596681
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0c8e59a394825248b7ac2005f6168fa
-      internalID: 131734986
+      spriteID: 33ee28b2b3442c546a3a90a672c33b22
+      internalID: -58678027
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 003076586bf9e054e9b1dd9c1055f109
-      internalID: -1858070495
+      spriteID: 495f01193c487704f84c8d3baae5b322
+      internalID: 1850134318
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a1bfd980a605e145aca7f66a6dc4a89
-      internalID: -1187820707
+      spriteID: 2b8392447beaf97478759df9bacc7897
+      internalID: 1836986797
       vertices: []
       indices: 
       edges: []
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e328345ad7be3a48b20875cda327bc3
-      internalID: 1744040943
+      spriteID: 5872bfeff64d0fc4ca0afff6be2e4973
+      internalID: 1364361561
       vertices: []
       indices: 
       edges: []
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b4427d2ad1f60c42aac6824dce06cac
-      internalID: -52188999
+      spriteID: 2b90c130a9d00cf449dd130ffdfc3bdb
+      internalID: -130520533
       vertices: []
       indices: 
       edges: []
@@ -224,7 +224,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 68d0910da434f7444b7fa76daf7e39d8
     internalID: 0
     vertices: []
     indices: 
@@ -232,11 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      monkeWalk_sh_0: 131734986
-      monkeWalk_sh_1: -1858070495
-      monkeWalk_sh_2: -1187820707
-      monkeWalk_sh_3: 1744040943
-      monkeWalk_sh_4: -52188999
+      monkeWalk_sh_0: -58678027
+      monkeWalk_sh_1: 1850134318
+      monkeWalk_sh_2: 1836986797
+      monkeWalk_sh_3: 1364361561
+      monkeWalk_sh_4: -130520533
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

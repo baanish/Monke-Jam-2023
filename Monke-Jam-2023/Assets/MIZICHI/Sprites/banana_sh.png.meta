@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 575d1dce9cd4ac749b96ee8bd3f887a5
-      internalID: 2075038416
+      spriteID: 09a2f71f308f20842934ef79b712a3c2
+      internalID: -1086208486
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad66b54b4dd04074bb7fe9bb35ffced5
-      internalID: 1184250082
+      spriteID: d2291b9d2f76f6340b31e0f40f9d0cbf
+      internalID: 497567987
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31ec0e65a0bbae248bd90ea3fd7ded2e
-      internalID: -455406158
+      spriteID: 7e42c8b1b1d8ab54abb04fdddab1c24f
+      internalID: 627910911
       vertices: []
       indices: 
       edges: []
@@ -182,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c9dbe6700b1ec6e4facd43fcf6124cfc
+    spriteID: e5dc9d5bbe376234caefb163ae299734
     internalID: 0
     vertices: []
     indices: 
@@ -190,9 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      banana_sh_0: 2075038416
-      banana_sh_1: 1184250082
-      banana_sh_2: -455406158
+      banana_sh_0: -1086208486
+      banana_sh_1: 497567987
+      banana_sh_2: 627910911
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c141a100d3a53e4d909e6108b6d59a9
-      internalID: -504169754
+      spriteID: 759392d2364598147a7d76b547c3502b
+      internalID: 1021122807
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62a59235bb670414293e417190ef210b
-      internalID: 909409262
+      spriteID: aa62d6c8aa7669f4591c6011f9333da2
+      internalID: -154378042
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f492a4122c9331f468d3bdec4612ea8c
-      internalID: 859612715
+      spriteID: ef4d6d5161661a44c806494869edb61d
+      internalID: -782642150
       vertices: []
       indices: 
       edges: []
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5e0c2e5b47419746a385368abd18f68
-      internalID: 1621963971
+      spriteID: 6c76ffd7282b3394e8d2decfbca02284
+      internalID: -537042783
       vertices: []
       indices: 
       edges: []
@@ -203,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9b7c9845fe1c1c2479ba544fc19a9af9
+    spriteID: bfecc779fdfa1dc4aa975b016b512546
     internalID: 0
     vertices: []
     indices: 
@@ -211,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      monkeJump_sh_0: -504169754
-      monkeJump_sh_1: 909409262
-      monkeJump_sh_2: 859612715
-      monkeJump_sh_3: 1621963971
+      monkeJump_sh_0: 1021122807
+      monkeJump_sh_1: -154378042
+      monkeJump_sh_2: -782642150
+      monkeJump_sh_3: -537042783
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
