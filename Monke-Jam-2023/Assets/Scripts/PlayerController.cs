@@ -175,6 +175,12 @@ public class PlayerController : MonoBehaviour
             // set heavy attack plane to inactive
             punchPlanes[1].SetActive(false);
         }
+
+        //press escape to quit
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     // Check if the player has collided with a banana

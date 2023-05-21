@@ -165,7 +165,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26763032}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -360,7 +360,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228190938}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -750,6 +750,16 @@ Rigidbody:
 --- !u!1 &681084664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8476422630216309802, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
+  m_PrefabInstance: {fileID: 8476422629823650514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &681084665 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8476422630216309807, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
+  m_PrefabInstance: {fileID: 8476422629823650514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &681084666 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8476422630216309804, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
   m_PrefabInstance: {fileID: 8476422629823650514}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
@@ -1542,6 +1552,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8476422629494981962, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476422630216309801, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
+      propertyPath: monkeAnim
+      value: 
+      objectReference: {fileID: 681084665}
+    - target: {fileID: 8476422630216309801, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
+      propertyPath: monkeSprite
+      value: 
+      objectReference: {fileID: 681084666}
     - target: {fileID: 8476422630216309802, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1591,6 +1613,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8476422630216309806, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
+      propertyPath: monkeAnim
+      value: 
+      objectReference: {fileID: 681084665}
+    - target: {fileID: 8476422630216309806, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1135262817}
@@ -1606,5 +1632,9 @@ PrefabInstance:
       propertyPath: healthBarImage
       value: 
       objectReference: {fileID: 797812248}
+    - target: {fileID: 8476422630278853930, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.59
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673c2384e30f30c4a8794711ff035038, type: 3}
