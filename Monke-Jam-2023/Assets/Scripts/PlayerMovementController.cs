@@ -30,10 +30,15 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField]
     public float gravity = 14.7f;
 
+    [SerializeField]
     Animator monkeAnim;
+    [SerializeField]
     SpriteRenderer monkeSprite;
+    [SerializeField]
     private bool facingRight;//FLIP Sprite
+    [SerializeField]
     public GameObject HeavyPlane;
+    [SerializeField]
     public GameObject LightPlane;
 
     void Start()

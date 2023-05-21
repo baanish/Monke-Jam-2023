@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public float punchCooldown = 0.2f;
 
+    [SerializeField]
     Animator monkeAnim;
     // Start is called before the first frame update
     void Start()
