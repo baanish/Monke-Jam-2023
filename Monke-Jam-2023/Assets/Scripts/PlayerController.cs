@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask pickupLayer;
 
     [SerializeField]
-    public long monkeTimeLimit = 30000;
+    public long monkeTimeLimit = 60000;
 
     [SerializeField]
     public long monkeTimeStart = 0;
@@ -59,9 +59,12 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     public float punchCooldown = 0.2f;
+
+    Animator monkeAnim;
     // Start is called before the first frame update
     void Start()
     {
+        monkeAnim = GetComponent<Animator>();
         Component[] components = deathPanelText.GetComponents(typeof(Component));
         foreach (Component component in components)
         {
@@ -100,6 +103,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.E) || Input.GetMouseButton(0)) {
             // set light attack plane to active
             punchPlanes[0].SetActive(true);
+            monkeAnim.SetTrigger("punch1");
             Vector3 punchPlaneScale = new Vector3(transform.localScale.x * punchPlanes[0].transform.localScale.x*5, transform.localScale.y * punchPlanes[0].transform.localScale.y, transform.localScale.z * punchPlanes[0].transform.localScale.z * 10);
             Collider [] enemyHits = Physics.OverlapBox(punchPlanes[0].transform.position, punchPlaneScale, punchPlanes[0].transform.rotation, enemyLayer);
             Collider[] personHits = Physics.OverlapBox(punchPlanes[0].transform.position, punchPlaneScale, punchPlanes[0].transform.rotation, personLayer);
@@ -138,6 +142,7 @@ public class PlayerController : MonoBehaviour
             
             // set heavy attack plane to active
             punchPlanes[1].SetActive(true);
+            monkeAnim.SetTrigger("punch2");
             Vector3 punchPlaneScale = new Vector3(transform.localScale.x * punchPlanes[1].transform.localScale.x*5, transform.localScale.y * punchPlanes[1].transform.localScale.y, transform.localScale.z * punchPlanes[1].transform.localScale.z*10);
             Collider[] enemyHits = Physics.OverlapBox(punchPlanes[1].transform.position, punchPlaneScale/2, punchPlanes[1].transform.rotation, enemyLayer);
             Collider[] personHits = Physics.OverlapBox(punchPlanes[1].transform.position, punchPlaneScale/2, punchPlanes[1].transform.rotation, personLayer);
@@ -177,6 +182,7 @@ public class PlayerController : MonoBehaviour
         if ((pickupLayer & 1 << other.gameObject.layer) != 0)
         {
             // if the player has collided with a banana, destroy the banana and add to the score
+            monkeAnim.SetTrigger("eat");
             Destroy(other.gameObject);
             healthBarImage.GetComponent<Image>().fillAmount = 1f;
             if (!monkeStarted)
