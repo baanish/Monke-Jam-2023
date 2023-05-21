@@ -30,18 +30,50 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField]
     public float gravity = 14.7f;
 
+    Animator monkeAnim;
+    SpriteRenderer monkeSprite;
+    private bool facingRight;//FLIP Sprite
+    public GameObject HeavyPlane;
+    public GameObject LightPlane;
+
     void Start()
     {
         // Set the gravity
         Physics.gravity = new Vector3(0, -gravity, 0);
+        monkeAnim = GetComponent<Animator>();
+        monkeSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Move the player
+        float horizontal = Input.GetAxis("Horizontal");
+        //Fliping Sprite and Planes
+        if (horizontal > 0 && !facingRight){
+            monkeSprite.flipX = false;
+            facingRight = !facingRight;
+            if (HeavyPlane.transform.localPosition.x < 0)
+                Flip();
+        }
+        else if (horizontal < 0 && facingRight){
+            monkeSprite.flipX = true;
+            facingRight = !facingRight;
+            Flip();
+        }
+
         var movement = new Vector2(Input.GetAxis("Horizontal"), 0);
         transform.Translate(movement * speed * Time.deltaTime);
+        if (horizontal != 0 && isGrounded == true)
+        {//WALK
+            monkeAnim.SetBool("walk", true);
+            monkeAnim.SetBool("jump", false);
+        }
+        else if (horizontal == 0 && isGrounded == true)//IDLE
+        {
+            monkeAnim.SetBool("walk", false);
+            monkeAnim.SetBool("jump", false);
+        }
 
         // Jump if the player is pressing the spacebar, check if the player is on the ground allow a double jump.
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
@@ -53,6 +85,9 @@ public class PlayerMovementController : MonoBehaviour
                 transform.GetComponent<Rigidbody>().AddForce(new Vector2(0, jumpForce));
                 jumpStart = System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond;
                 isGrounded = false;
+                //JUMP
+                monkeAnim.SetBool("jump", true);
+                monkeAnim.SetBool("walk", false);
             }
             else if (doubleJump)
             {
@@ -63,6 +98,9 @@ public class PlayerMovementController : MonoBehaviour
                     // if the player is not on the ground, check if they can double jump
                     transform.GetComponent<Rigidbody>().AddForce(new Vector2(0, jumpForce));
                     doubleJump = false;
+                    //DOUBLEJUMP
+                    monkeAnim.SetBool("jump", true);
+                    monkeAnim.SetBool("walk", false);
                 }
             }
         }
@@ -89,8 +127,21 @@ public class PlayerMovementController : MonoBehaviour
     {
         if ((groundCheck & 1 << collision.gameObject.layer) != 0)
         {
+            //IDLE
+            monkeAnim.SetBool("jump", false);
+            monkeAnim.SetBool("walk", false);
             isGrounded = true;
             doubleJump = true;
         }
+    }
+
+    void Flip()
+    {
+        Vector3 newPos = HeavyPlane.transform.localPosition;
+        newPos.x *= -1;
+        HeavyPlane.transform.localPosition = newPos;
+        newPos = LightPlane.transform.localPosition;
+        newPos.x *= -1;
+        LightPlane.transform.localPosition = newPos;
     }
 }
