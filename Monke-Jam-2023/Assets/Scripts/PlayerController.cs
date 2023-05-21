@@ -62,16 +62,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     Animator monkeAnim;
-    // Start is called before the first frame update
-    void Start()
-    {
-        monkeAnim = GetComponent<Animator>();
-        Component[] components = deathPanelText.GetComponents(typeof(Component));
-        foreach (Component component in components)
-        {
-            Debug.Log(component.ToString());
-        }
-    }
+
+    [SerializeField]
+    public GameObject deathScoreText;
 
     // Update is called once per frame
     void Update()
@@ -88,6 +81,7 @@ public class PlayerController : MonoBehaviour
                 if (!deathPanel.activeSelf) {
                     deathPanel.SetActive(true);
                     deathTime = System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond;
+                    deathScoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + score;
                 }
             }
         }
@@ -98,6 +92,8 @@ public class PlayerController : MonoBehaviour
             deathPanel.GetComponent<Image>().color = new Color(0, 0, 0, Mathf.Clamp((System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond - deathTime) / (float)deathPanelAnimationTime, 0f, 1f));
             // get the DeathText component by name and change the alpha value of the text
             deathPanelText.GetComponent<TextMeshProUGUI>().color = new Color(1, 0, 0, Mathf.Clamp((System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond - deathTime) / (float)deathPanelAnimationTime, 0f, 1f));
+            // get the DeathScoreText component by name and change the alpha value of the text
+            deathScoreText.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, Mathf.Clamp((System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond - deathTime) / (float)deathPanelAnimationTime, 0f, 1f));
         }
 
         // light attack (left mouse button), E

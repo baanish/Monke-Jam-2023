@@ -16,9 +16,10 @@ public class PersonController : MonoBehaviour
     {
         if (punchLayer == (punchLayer | (1 << other.gameObject.layer)))
         {
-            // launch the person
+            // launch the person in the opposite direction of the punch plane
             Rigidbody rb = GetComponent<Rigidbody>();
-            rb.velocity = new Vector3(launchSpeed*2, launchSpeed*0.5f, 0);
+            Vector3 direction = transform.position - other.transform.position;
+            rb.velocity = new Vector3(direction.normalized.x * launchSpeed*2, launchSpeed*0.5f, 0);
             // destroy the person after aliveTime
             Destroy(gameObject, aliveTime);
         }

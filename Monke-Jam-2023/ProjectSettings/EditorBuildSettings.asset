@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MIZICHI/test02.unity
-    guid: 3880952f2c0369a448eee1ae1e28c553
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/StartMenu.unity
+    guid: 3794bb6919fc6af46abd3754a3397c30
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 54d7f378041a7aa40a9802d68c127f53
   m_configObjects: {}
