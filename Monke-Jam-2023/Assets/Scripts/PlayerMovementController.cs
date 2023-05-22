@@ -41,6 +41,13 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField]
     public GameObject LightPlane;
 
+    [SerializeField]
+    public GameObject jumpSound;
+    [SerializeField]
+    public GameObject walkSound;
+    [SerializeField]
+    public GameObject landSound;
+
     void Start()
     {
         // Set the gravity
@@ -73,11 +80,16 @@ public class PlayerMovementController : MonoBehaviour
         {//WALK
             monkeAnim.SetBool("walk", true);
             monkeAnim.SetBool("jump", false);
+            //play walk sound if not already playing
+            if (!walkSound.GetComponent<AudioSource>().isPlaying)
+                walkSound.GetComponent<AudioSource>().Play();
         }
         else if (horizontal == 0 && isGrounded == true)//IDLE
         {
             monkeAnim.SetBool("walk", false);
             monkeAnim.SetBool("jump", false);
+            //disable walk sound
+            walkSound.GetComponent<AudioSource>().Stop();
         }
 
         // Jump if the player is pressing the spacebar, check if the player is on the ground allow a double jump.
@@ -93,6 +105,11 @@ public class PlayerMovementController : MonoBehaviour
                 //JUMP
                 monkeAnim.SetBool("jump", true);
                 monkeAnim.SetBool("walk", false);
+                //play jump sound
+                jumpSound.GetComponent<AudioSource>().Play();
+                //disable walk sound
+                walkSound.GetComponent<AudioSource>().Stop();
+
             }
             else if (doubleJump)
             {
@@ -106,6 +123,7 @@ public class PlayerMovementController : MonoBehaviour
                     //DOUBLEJUMP
                     monkeAnim.SetBool("jump", true);
                     monkeAnim.SetBool("walk", false);
+                    jumpSound.GetComponent<AudioSource>().Play();
                 }
             }
         }
@@ -135,6 +153,11 @@ public class PlayerMovementController : MonoBehaviour
             //IDLE
             monkeAnim.SetBool("jump", false);
             monkeAnim.SetBool("walk", false);
+            if (!isGrounded)
+            {
+                //play land sound
+                landSound.GetComponent<AudioSource>().Play();
+            }
             isGrounded = true;
             doubleJump = true;
         }

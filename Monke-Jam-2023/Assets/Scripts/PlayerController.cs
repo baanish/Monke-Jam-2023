@@ -66,6 +66,33 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public GameObject deathScoreText;
 
+    [SerializeField]
+    public GameObject BGM;
+
+    [SerializeField]
+    public GameObject deathBGM;
+
+    [SerializeField]
+    public GameObject eatSound;
+
+    [SerializeField]
+    public GameObject lightPunchSound;
+
+    [SerializeField]
+    public GameObject heavyPunchSound;
+
+
+    void Start()
+    {
+        healthBarImage.GetComponent<Image>().fillAmount = 1f;
+        if (!monkeStarted)
+        {
+            monkeStarted = true;
+        }
+        monkeTimeStart = System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -82,6 +109,9 @@ public class PlayerController : MonoBehaviour
                     deathPanel.SetActive(true);
                     deathTime = System.DateTime.Now.Ticks / System.TimeSpan.TicksPerMillisecond;
                     deathScoreText.GetComponent<TextMeshProUGUI>().text = "Score: " + score;
+                    //deactivate the BGM, activate the deathBGM
+                    BGM.SetActive(false);
+                    deathBGM.SetActive(true);
                 }
             }
         }
@@ -101,6 +131,7 @@ public class PlayerController : MonoBehaviour
             // set light attack plane to active
             punchPlanes[0].SetActive(true);
             monkeAnim.SetTrigger("punch1");
+            lightPunchSound.GetComponent<AudioSource>().Play();
             Vector3 punchPlaneScale = new Vector3(transform.localScale.x * punchPlanes[0].transform.localScale.x*5, transform.localScale.y * punchPlanes[0].transform.localScale.y, transform.localScale.z * punchPlanes[0].transform.localScale.z * 10);
             Collider [] enemyHits = Physics.OverlapBox(punchPlanes[0].transform.position, punchPlaneScale, punchPlanes[0].transform.rotation, enemyLayer);
             Collider[] personHits = Physics.OverlapBox(punchPlanes[0].transform.position, punchPlaneScale, punchPlanes[0].transform.rotation, personLayer);
@@ -140,6 +171,7 @@ public class PlayerController : MonoBehaviour
             // set heavy attack plane to active
             punchPlanes[1].SetActive(true);
             monkeAnim.SetTrigger("punch2");
+            heavyPunchSound.GetComponent<AudioSource>().Play();
             Vector3 punchPlaneScale = new Vector3(transform.localScale.x * punchPlanes[1].transform.localScale.x*5, transform.localScale.y * punchPlanes[1].transform.localScale.y, transform.localScale.z * punchPlanes[1].transform.localScale.z*10);
             Collider[] enemyHits = Physics.OverlapBox(punchPlanes[1].transform.position, punchPlaneScale/2, punchPlanes[1].transform.rotation, enemyLayer);
             Collider[] personHits = Physics.OverlapBox(punchPlanes[1].transform.position, punchPlaneScale/2, punchPlanes[1].transform.rotation, personLayer);
@@ -186,6 +218,7 @@ public class PlayerController : MonoBehaviour
         {
             // if the player has collided with a banana, destroy the banana and add to the score
             monkeAnim.SetTrigger("eat");
+            eatSound.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
             healthBarImage.GetComponent<Image>().fillAmount = 1f;
             if (!monkeStarted)

@@ -136,11 +136,11 @@ Library: lib_burst_generated
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.Animation.Runtime.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
+--root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.SpriteShape.Runtime.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.PixelPerfect.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.Common.Runtime.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.IK.Runtime.dll
---root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.Tilemap.Extras.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
 --assembly-folder=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\
@@ -287,11 +287,11 @@ Library: lib_burst_generated
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.Animation.Runtime.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
+--root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.SpriteShape.Runtime.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.PixelPerfect.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.Common.Runtime.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.IK.Runtime.dll
---root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.2D.Tilemap.Extras.dll
 --root-assembly=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
 --assembly-folder=E:\Development\Games\Monke-Jam-2023\Monke-Jam-2023\Temp\StagingArea\Data\Managed\
