@@ -582,6 +582,10 @@ PrefabInstance:
       propertyPath: healthBarImage
       value: 
       objectReference: {fileID: 3140551598880554589}
+    - target: {fileID: 126068971013093820, guid: b86a3bdf6415efe439f9496c30338aa5, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 126068971013093822, guid: b86a3bdf6415efe439f9496c30338aa5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -592,15 +596,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 126068971013093823, guid: b86a3bdf6415efe439f9496c30338aa5, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.48297003
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 126068971013093823, guid: b86a3bdf6415efe439f9496c30338aa5, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.48297003
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 126068971013093823, guid: b86a3bdf6415efe439f9496c30338aa5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.48297003
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 126068971013093823, guid: b86a3bdf6415efe439f9496c30338aa5, type: 3}
       propertyPath: m_LocalPosition.x
