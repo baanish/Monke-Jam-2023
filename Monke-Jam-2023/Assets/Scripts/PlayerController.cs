@@ -130,6 +130,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.E) || Input.GetMouseButton(0)) {
             // set light attack plane to active
             punchPlanes[0].SetActive(true);
+            monkeAnim.SetBool("walk", false);
+            monkeAnim.SetBool("jump", false);
             monkeAnim.SetTrigger("punch1");
             lightPunchSound.GetComponent<AudioSource>().Play();
             Vector3 punchPlaneScale = new Vector3(transform.localScale.x * punchPlanes[0].transform.localScale.x*5, transform.localScale.y * punchPlanes[0].transform.localScale.y, transform.localScale.z * punchPlanes[0].transform.localScale.z * 10);
@@ -170,6 +172,8 @@ public class PlayerController : MonoBehaviour
             
             // set heavy attack plane to active
             punchPlanes[1].SetActive(true);
+            monkeAnim.SetBool("walk", false);
+            monkeAnim.SetBool("jump", false);
             monkeAnim.SetTrigger("punch2");
             heavyPunchSound.GetComponent<AudioSource>().Play();
             Vector3 punchPlaneScale = new Vector3(transform.localScale.x * punchPlanes[1].transform.localScale.x*5, transform.localScale.y * punchPlanes[1].transform.localScale.y, transform.localScale.z * punchPlanes[1].transform.localScale.z*10);

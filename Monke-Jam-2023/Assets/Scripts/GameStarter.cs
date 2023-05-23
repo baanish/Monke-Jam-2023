@@ -7,6 +7,7 @@ public class GameStarter : MonoBehaviour
 {
     [SerializeField]
     public string gameScene = "Game";
+    public GameObject instructions;
 
     // function to start the game when the button is pressed
     public void StartGame()
@@ -18,5 +19,13 @@ public class GameStarter : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void HowToPlay()
+    {
+        instructions.SetActive(true);
+    }
+    public void Back()
+    {
+        instructions.SetActive(false);
     }
 }
